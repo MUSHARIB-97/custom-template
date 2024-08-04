@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "PoppinsItalic";
+  src: url("./../../assets/Fonts/Poppins/Poppins-Italic.ttf");
+}
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url("./../../assets/Fonts/Poppins/Poppins-Medium.ttf");
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+.parentContainer {
+  box-sizing: border-box;
+  position: relative;
+}
+.parentContainer .caption-slide-one p {
+  padding: 0%;
+  margin: 0%;
+}
+
+.parentContainer .caption-slide-one {
+  position: absolute;
+  left: 5%;
+  bottom: 40%;
+}
+@media (max-width: 968px) {
+  .parentContainer .caption-slide-one {
+    position: absolute;
+    left: 5%;
+    bottom: 20%;
+  }
+}
+
+.parentContainer .caption-slide-one .Heading {
+  font-family: PoppinsItalic;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2vh;
+  text-transform: uppercase;
+  animation: slideFromTop 0.5s ease-out;
+}
+
+.parentContainer .caption-slide-one .disc {
+  font-family: PoppinsMedium;
+  font-size: 1.4rem;
+  width: 80%;
+  animation: slideFromLeft 1.5s ease-out;
+}
+
+@media (max-width: 750px) {
+  .parentContainer .caption-slide-one .Heading {
+    font-size: 1rem !important;
+    margin-bottom: 0.6vh !important;
+  }
+  .parentContainer .caption-slide-one .disc {
+    font-size: 0.8rem !important;
+  }
+  .parentContainer .caption-slide-one .item-show-button-text {
+    font-size: 0.6rem !important;
+  }
+}
+@media (max-width: 450px) {
+  .parentContainer .caption-slide-one .Heading {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.6vh !important;
+  }
+  .parentContainer .caption-slide-one .disc {
+    font-size: 0.6rem !important;
+  }
+  .parentContainer .caption-slide-one .item-show-button-text {
+    font-size: 0.5rem !important;
+  }
+}
+.parentContainer .caption-slide-one .item-show-button {
+  /* height: 5vh; */
+  border-radius: 6px;
+  background-color: #80dad1;
+  padding: 5px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  cursor: pointer;
+  animation: slideFromBottom 2s ease-out;
+}
+
+.parentContainer .caption-slide-one .item-show-button-text {
+  font-family: PoppinsItalic;
+  font-size: 0.8rem;
+}
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-160px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+}
+
+.custom-indicators button {
+  background-color: #c0c0c0;
+  border: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 200ms ease;
+}
+
+.custom-indicators button.active {
+  background-color: #32bafb;
+  width: 25px;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.custom-indicators button:hover {
+  background-color: rgba(125, 125, 125);
+}
+@media (max-width: 400px) {
+  .custom-indicators {
+    display: none;
+  }
+}
+@media (min-width: 410px) {
+  .custom-indicators {
+    bottom: 5%;
+  }
+}

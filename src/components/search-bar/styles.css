@@ -1,0 +1,33 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #e1e1e1;
+  flex: 1;
+  height: 7vh;
+  border-radius: 5px;
+  position: relative;
+}
+.inputField {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  padding-left: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.inputField::placeholder {
+  font-size: 0.8rem;
+}
+.searchImgContainer {
+  width: 6vw;
+  height: 6vh;
+  position: absolute;
+  right: 10px;
+}
+.searchImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

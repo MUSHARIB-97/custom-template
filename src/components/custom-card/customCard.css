@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url("./../../assets/Fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "PoppinsMediumItalic";
+  src: url("./../../assets/Fonts/Poppins/Poppins-MediumItalic.ttf");
+}
+
+.cardContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.1em;
+}
+
+.cardImgContainer {
+  width: 100% !important;
+  height: 50vh !important;
+}
+
+.cardImgContainer .cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.cardImgContainer .cardImgHover {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.cardContainer:hover .cardImgContainer .cardImgHover {
+  opacity: 1;
+}
+
+.cardDetails {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.5s ease-in-out;
+  transform: translateY(10%);
+  opacity: 0;
+}
+
+.cardContainer:hover .cardDetails {
+  transform: translateY(0);
+  opacity: 1;
+}
+.cardContainer:hover .cardDetails p {
+  margin: 0%;
+  padding: 0%;
+}
+
+.sideOption {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateX(10%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between !important;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 0px;
+  border-radius: 0 0 0 8px; /* Rounded bottom-left corner */
+}
+
+.cardContainer:hover .sideOption {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.visibilityContainer {
+  width: 4vw !important;
+  height: 4vh !important;
+  cursor: pointer;
+  /* margin-bottom: 5px; */
+  margin: -10px 0px 5px 0px;
+}
+.favoriteContainer {
+  width: 3vw;
+  height: 3vh;
+  cursor: pointer;
+  margin-bottom: 5px !important;
+}
+
+.visibilityContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.favoriteContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.favoriteContainer {
+  margin-bottom: 0;
+}
+.sidePrductContainer {
+  position: fixed;
+  top: 0;
+  right: -100vw; /* Start off-screen */
+  width: 100vw; /* Full screen width */
+  height: 100vh; /* Full screen height */
+  z-index: 999;
+  /* cursor: none; */
+  transition: right 0.5s ease-in-out, background-color 0.5s ease-in-out; /* Smooth transition */
+}
+
+.sidePrductContainerOpen {
+  right: 0; /* On-screen position */
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sidePrductContainer .sideProductDetail {
+  background-color: #fff;
+  width: 40vw;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  text-align: start;
+  cursor: default;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 800px) {
+  .sidePrductContainer .sideProductDetail {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidePrductContainer .sideProductDetail {
+    width: 80vw;
+    padding: 10px 0;
+  }
+}
+
+.sidePrductContainer .sideProductDetail .productImgContainer {
+  width: 100%;
+  height: 40vh;
+}
+
+.sidePrductContainer .sideProductDetail .productImgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidePrductContainer .sideProductDetail .heading p,
+.sidePrductContainer .sideProductDetail .priceContainer p,
+.sidePrductContainer .sideProductDetail .amount .counter p {
+  margin: 0;
+  padding: 0;
+  font-family: PoppinsMedium;
+}
+
+.sidePrductContainer .sideProductDetail .priceContainer p {
+  font-family: PoppinsMediumItalic;
+}
+
+.sidePrductContainer .sideProductDetail .amount .counter p {
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px #6f6464;
+}
+
+.sidePrductContainer .closeContainer {
+  width: 3vw;
+  height: 3vh;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.sidePrductContainer .closeContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

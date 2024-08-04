@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url("./../../assets/Fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "PoppinsMediumItalic";
+  src: url("./../../assets/Fonts/Poppins/Poppins-ThinItalic.ttf");
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+.btnContainer {
+  display: flex;
+  background-color: #32bafb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btnContainer p {
+  padding: 0%;
+  margin: 0%;
+  text-shadow: none;
+  font-family: PoppinsMediumItalic;
+  color: #fff;
+}

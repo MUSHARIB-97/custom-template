@@ -12,6 +12,8 @@
   padding: 0%;
   margin: 0%;
   overflow-x: hidden;
+  background-color: #fafafa;
+  width: 100%;
 }
 
 .fotter-logo-container {
@@ -30,9 +32,17 @@
   margin-top: 10px;
   font-size: 1rem;
   font-family: PoppinsMedium;
-  text-align: justify;
+  /* text-align: justify; */
+  width: 100%;
 }
 
+/* @media (max-width: 400px) {
+  .fotter-logo-container-text p {
+    width: 100%;
+    text-align: start;
+    margin-top: 1em !important;
+  }
+} */
 @media (max-width: 800px) {
   .fotter-logo-container-text p {
     margin-top: 0px;
@@ -50,7 +60,7 @@
 }
 .categoryList {
   padding-top: 1%;
-  border-right: 1px solid #333333;
+  /* border-right: 1px solid #333333; */
 }
 .categoryList p {
   padding: 0%;
@@ -64,7 +74,7 @@
 }
 
 .categoryList .list-item {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.7em;
   font-family: PoppinsMedium;
   cursor: pointer;
   font-size: 1rem;
@@ -72,8 +82,8 @@
   transition: all 0.4s ease-in;
 }
 .categoryList .list-item:hover {
-  font-size: 1.3rem;
-  border-bottom: 1px solid #333333;
+  font-size: 1.03rem;
+  color: #0dcaf0;
 }
 
 .CompanyInfo {
@@ -91,14 +101,35 @@
 }
 
 .CompanyInfo .list-item {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.7em;
   font-family: PoppinsMedium;
   cursor: pointer;
   font-size: 1rem;
   color: #333333;
   transition: all 0.4s ease-in;
+  text-align: justify;
 }
 .CompanyInfo .list-item:hover {
-  font-size: 1.3rem;
-  border-bottom: 1px solid #333333;
+  font-size: 1.03rem;
+  color: #0dcaf0;
+}
+
+.rights {
+  background-color: #333333;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.rights p {
+  margin: 0%;
+  padding: 0%;
+  color: #fafafa;
+  font-family: PoppinsMedium;
+  padding-left: 5em;
+}
+@media (max-width: 500px) {
+  .rights p {
+    padding-left: .1em;
+    text-align: right;
+  }
 }

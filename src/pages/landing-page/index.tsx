@@ -10,6 +10,7 @@ import {
 } from "../../constants/LandingPage";
 import HomeLayout from "../../layouts/main-layout";
 import "./landingPageStyle.css";
+import CustomButton from "../../components/custom-button/CustomButton";
 
 const LandingPage: React.FC = () => {
   const [productShow, setProductShow] = useState<string>(
@@ -32,13 +33,17 @@ const LandingPage: React.FC = () => {
       }}
     >
       <div>
-        <div className="pt-md-0 pt-sm-2 bg-danger">
+        <div
+          className="pt-md-0 pt-sm-2 bg-danger"
+          style={{ marginBottom: "10px" }}
+        >
           <CarouselSlider />
         </div>
-        <div className="row mx-lg-5 mx-sm-2 mx-xs-1 mt-md-4 mt-sm-2 mt-xs-2">
+        {/* <div className="row mx-lg-5 mx-sm-2 mx-xs-1 mt-md-4 mt-sm-2 mt-xs-2"> */}
+        <div className="row mx-2 mx-md-5 my-3">
           {Category.map((item, index) => (
             <div
-              className="col-md-3 col-xs-12 col-sm-6 mb-2"
+              className="col-md-3 col-xs-12 col-sm-6 mb-4"
               key={index}
               onClick={() => handleCategoryClick(item.title)}
             >
@@ -74,6 +79,14 @@ const LandingPage: React.FC = () => {
             ) : (
               <p>Hello World</p>
             )}
+          </div>
+        </div>
+        {/*  */}
+        <div className="newArrivals ml-2">
+          <p className="heading">All in One Place</p>
+          <p className="para">Your one-stop shop for everything fabulous.</p>
+          <div className="d-flex mt-4">
+            <CustomButton title="Browse All" />
           </div>
         </div>
       </div>

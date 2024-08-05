@@ -16,9 +16,9 @@ const CustomCard: React.FC<MyProps> = ({ option }) => {
   };
 
   return (
-    <div className="row my-4 mx-5">
+    <div className="row my-4 mx-md-5 mx-1">
       {option.map((item) => (
-        <div className="col-md-3 col-sm-4 col-xs-6 mb-4" key={item.id}>
+        <div className="col-md-3 col-sm-6 col-xs-6 mb-4" key={item.id}>
           <div className="cardContainer">
             <div className="cardImgContainer">
               <img src={item.imgVisible} alt="" className="cardImg" />

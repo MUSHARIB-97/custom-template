@@ -12,19 +12,21 @@ function CarouselSlider() {
   };
 
   return (
-    <div className="position-relative">
+    <div className="position-relative h-90">
       <Carousel
         className="parentContainer"
         activeIndex={activeIndex}
         onSelect={handleSelect}
         indicators={false}
+        // style={{height:"40vh"}}
       >
         {slider.map((item, index) => (
           <Carousel.Item key={index}>
             <img
-              className="d-block w-100"
+              className="d-flex w-100 carousalImg"
               src={item?.img}
               alt={`Slide ${index + 1}`}
+              // style={{height:"50vh"}}
             />
             <div className="caption-slide-one">
               <p className="Heading">{item.heading}</p>

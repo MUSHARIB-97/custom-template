@@ -155,7 +155,13 @@
 }
 @media (max-width: 400px) {
   .custom-indicators {
-    display: none;
+    /* display: none; */
+    bottom: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .carousalImg {
+    height: 40vh;
   }
 }
 @media (min-width: 410px) {

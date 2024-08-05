@@ -17,7 +17,10 @@ const HomeLayout: React.FC<body> = ({ children, style }: body) => {
       <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
         {children}
       </div>
-      <div className="mt-4">
+      <div
+        className="mt-4 px-2 py-5"
+        style={{ backgroundColor: "#fafafa" }}
+      >
         <Fotter />
       </div>
     </div>

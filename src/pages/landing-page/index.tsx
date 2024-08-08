@@ -6,20 +6,36 @@ import Navbar from "../../components/navbar/Navbar";
 import {
   Category,
   categoryLinks,
+  discoveries,
   productCard,
 } from "../../constants/LandingPage";
 import HomeLayout from "../../layouts/main-layout";
 import "./landingPageStyle.css";
 import CustomButton from "../../components/custom-button/CustomButton";
+import NewCard from "../../components/new-custom-card";
+import BasicDemo from "../../components/new-custom-card";
 
 const LandingPage: React.FC = () => {
   const [productShow, setProductShow] = useState<string>(
     "BEAUTY & PERSONAL CAR"
   );
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   // Handler to update the selected category
   const handleCategoryClick = (category: string) => {
     setProductShow(category);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : discoveries.length - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex < discoveries.length - 1 ? prevIndex + 1 : 0
+    );
   };
 
   return (
@@ -85,13 +101,37 @@ const LandingPage: React.FC = () => {
         <div className="newArrivals ml-2">
           <p className="heading">All in One Place</p>
           <p className="para">Your one-stop shop for everything fabulous.</p>
-          <div className="d-flex mt-4">
-            <CustomButton title="Browse All" />
+          <div className="d-flex my-4">
+            <CustomButton
+              title="Browse All"
+              style={{ padding: ".4em", paddingInline: "1em" }}
+            />
+          </div>
+        </div>
+        {/*  Daily discoveries*/}
+        <div className="dailyDiscoveries my-4">
+          <div className="text">
+            <p className="heading">Omni’s Daily Discoveries</p>
+            <p className="para">
+              Step into fresh styles and today’s favourites at Omni's Store.
+            </p>
+          </div>
+          {/* <div className="sliderContainer mx-4">
+            {discoveries?.map((item, index) => {
+              return (
+                <div className="col-md-3">
+                  <NewCard img={item?.img} />
+                </div>
+              );
+            })}
+          </div> */}
+          <div>
+            <BasicDemo />
           </div>
         </div>
       </div>
     </HomeLayout>
   );
 };
-
+  
 export default LandingPage;

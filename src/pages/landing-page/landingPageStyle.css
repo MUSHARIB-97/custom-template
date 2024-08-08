@@ -68,12 +68,22 @@
   color: #333333;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 500px) {
+  .productContainer .productDetail .heading {
+    font-size: 1.8rem;
+  }
+}
 .productContainer .productDetail .para {
   font-size: 1.1rem;
   font-family: PoppinsMedium;
   text-transform: capitalize;
 }
 
+@media only screen and (max-width: 500px) {
+  .productContainer .productDetail .para {
+    font-size: 0.9rem;
+  }
+}
 .visibilityContainer {
   width: 5vw;
   height: 5vh;
@@ -107,9 +117,7 @@
 }
 
 .productContainer .categoryBar p:hover {
-  border-bottom: none;
-  border: 1px solid #000;
-  padding: 5px;
+  color: #aaaaaa;
 }
 .newArrivals {
   background-image: url("./../../assets/images/gift-banner.png");
@@ -154,4 +162,60 @@
   .newArrivals .para {
     font-size: 1rem;
   }
+}
+
+.dailyDiscoveries {
+  text-align: center;
+}
+
+.dailyDiscoveries .text p {
+  margin: 0%;
+  padding: 0%;
+}
+
+.dailyDiscoveries .text .heading {
+  font-family: PoppinsMediumItalic;
+  font-size: 2.3rem;
+  color: #333333;
+}
+.dailyDiscoveries .text .para {
+  font-family: PoppinsMediumItalic;
+  font-size: q.3rem;
+  color: #333333;
+}
+
+.sliderContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.prevButton,
+.nextButton {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.cardContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.cardContainer .parentContainer {
+  width: 100%;
+}
+
+.prevButton {
+  position: absolute;
+  left: 10px;
+}
+
+.nextButton {
+  position: absolute;
+  right: 10px;
 }

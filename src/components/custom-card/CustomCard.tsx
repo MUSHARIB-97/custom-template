@@ -67,21 +67,33 @@ const CustomCard: React.FC<MyProps> = ({ option }) => {
             <div className="priceContainer my-2">
               <p className="price">$70/- item</p>
             </div>
-            <div className="amount d-flex gap-4">
-              <div className="counter d-flex gap-2">
-                <p onClick={() => setCounter(counter - 1)}>-</p>
+            <div className="amount">
+              <div className="counter">
                 <p>{counter}</p>
-                <p onClick={() => setCounter(counter + 1)}>+</p>
+                <div className="kamZiada">
+                  <p
+                    className="decreament"
+                    onClick={() => setCounter(counter - 1)}
+                  >
+                    -
+                  </p>
+                  <p
+                    className="increament"
+                    onClick={() => setCounter(counter + 1)}
+                  >
+                    +
+                  </p>
+                </div>
               </div>
-              <div className="d-flex align-center gap-4">
-                <CustomButton title="Add to cart" />
+              <div className="d-sm-flex align-center gap-4">
+                <CustomButton title="Add to cart" style={{ padding: "10px" }} />
                 <CustomButton
                   title=" Checkout"
-                  style={{ backgroundColor: "red" }}
+                  style={{ backgroundColor: "red", padding: "10px" }}
                 />
               </div>
             </div>
-            <div>
+            <div className="total">
               <p>4 total Items </p>
               <p>75$ Total Amount</p>
             </div>

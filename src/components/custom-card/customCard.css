@@ -73,11 +73,11 @@
   align-items: center;
   justify-content: space-between !important;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px 0px;
   border-radius: 0 0 0 8px; /* Rounded bottom-left corner */
 }
 
 .cardContainer:hover .sideOption {
+  padding: 10px 10px;
   opacity: 1;
   transform: translateX(0);
 }
@@ -164,28 +164,29 @@
   object-fit: cover;
 }
 
-.sidePrductContainer .sideProductDetail .heading p,
+/* .sidePrductContainer .sideProductDetail .heading p,
 .sidePrductContainer .sideProductDetail .priceContainer p,
 .sidePrductContainer .sideProductDetail .amount .counter p {
   margin: 0;
   padding: 0;
   font-family: PoppinsMedium;
-}
+} */
 
 .sidePrductContainer .sideProductDetail .priceContainer p {
   font-family: PoppinsMediumItalic;
 }
 
-.sidePrductContainer .sideProductDetail .amount .counter p {
+/* .sidePrductContainer .sideProductDetail .amount .counter p {
   font-size: 1.1rem;
   cursor: pointer;
   text-shadow: 1px 1px 1px #6f6464;
-}
+} */
 
 .sidePrductContainer .closeContainer {
   width: 3vw;
   height: 3vh;
   position: absolute;
+  left: 0.5em;
   cursor: pointer;
   z-index: 10000;
 }
@@ -194,4 +195,38 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 1em;
+}
+.total p {
+  margin: 0ch;
+  padding: 0ch;
+}
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.counter {
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border: 1px solid #333333;
+}
+.counter p {
+  margin: 0%;
+  padding: 0%;
+}
+
+.counter .kamZiada p {
+  margin: 0%;
+  padding: 0%;
 }

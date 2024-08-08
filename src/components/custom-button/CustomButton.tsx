@@ -8,7 +8,7 @@ interface MyProps {
 
 const CustomButton: React.FC<MyProps> = ({ title, style }: MyProps) => {
   return (
-    <div className="btnContainer px-4 py-1" style={style}>
+    <div className="btnContainer" style={style}>
       <p>{title}</p>
     </div>
   );
